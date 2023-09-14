@@ -39,7 +39,7 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-int		Fixed::getRawBits(void) const
+int		Fixed::getRawBits() const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (_value);
@@ -51,12 +51,12 @@ void	Fixed::setRawBits(int const raw)
 	_value = raw;
 }
 
-float	Fixed::toFloat(void) const
+float	Fixed::toFloat() const
 {
 	return ((float) _value / (1 << _fractional_bits));
 }
 
-int		Fixed::toInt(void) const
+int		Fixed::toInt() const
 {
 	return (_value >> _fractional_bits);
 }

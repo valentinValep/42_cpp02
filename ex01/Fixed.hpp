@@ -13,10 +13,10 @@ public:
 	Fixed	&operator=(const Fixed &src); // Assignment operator
 
 	~Fixed(); // Destructor
-	int		getRawBits(void) const;
+	int		getRawBits() const;
 	void	setRawBits(int const raw);
-	float	toFloat(void) const;
-	int		toInt(void) const;
+	float	toFloat() const;
+	int		toInt() const;
 };
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &src);

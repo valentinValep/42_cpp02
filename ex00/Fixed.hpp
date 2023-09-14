@@ -10,6 +10,6 @@ public:
 	Fixed(const Fixed &src); // Copy constructor
 	Fixed	&operator=(const Fixed &src); // Assignment operator
 	~Fixed(); // Destructor
-	int		getRawBits(void) const;
+	int		getRawBits() const;
 	void	setRawBits(int const raw);
 };
