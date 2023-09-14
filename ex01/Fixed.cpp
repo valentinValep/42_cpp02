@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "Fixed.hpp"
 
 Fixed::Fixed(): _value(0)
@@ -11,6 +12,16 @@ Fixed::Fixed(const Fixed &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src; // Assignment operator
+}
+
+Fixed::Fixed(const int value): _value(value << _fractional_bits)
+{
+	std::cout << "Int constructor called" << std::endl;
+}
+
+Fixed::Fixed(const float value): _value(roundf(value * (1 << _fractional_bits)))
+{
+	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed	&Fixed::operator=(const Fixed &src)
@@ -38,4 +49,20 @@ void	Fixed::setRawBits(int const raw)
 {
 	std::cout << "setRawBits member function called" << std::endl;
 	_value = raw;
+}
+
+float	Fixed::toFloat(void) const
+{
+	return ((float) _value / (1 << _fractional_bits));
+}
+
+int		Fixed::toInt(void) const
+{
+	return (_value >> _fractional_bits);
+}
+
+std::ostream	&operator<<(std::ostream &out, const Fixed &src)
+{
+	out << src.toFloat();
+	return (out);
 }
