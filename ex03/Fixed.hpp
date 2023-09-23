@@ -15,17 +15,20 @@ public:
 
 	// Operators
 	Fixed	&operator=(const Fixed &src); // Assignment operator
-	bool	operator>(const Fixed &src) const; // Comparison operators
+	// Comparison operators
+	bool	operator>(const Fixed &src) const;
 	bool	operator<(const Fixed &src) const;
 	bool	operator>=(const Fixed &src) const;
 	bool	operator<=(const Fixed &src) const;
 	bool	operator==(const Fixed &src) const;
 	bool	operator!=(const Fixed &src) const;
-	Fixed	operator+(const Fixed &src) const; // Arithmetic operators
+	// Arithmetic operators
+	Fixed	operator+(const Fixed &src) const;
 	Fixed	operator-(const Fixed &src) const;
 	Fixed	operator*(const Fixed &src) const;
 	Fixed	operator/(const Fixed &src) const;
-	Fixed	&operator++(); // Increment and decrement operators
+	// Increment and decrement operators
+	Fixed	&operator++();
 	Fixed	&operator--();
 	Fixed	operator++(int);
 	Fixed	operator--(int);
