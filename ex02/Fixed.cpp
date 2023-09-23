@@ -6,14 +6,13 @@
 
 Fixed::Fixed(): _value(0)
 {
-	// Default constructor
 	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src; // Assignment operator
+	*this = src;
 }
 
 Fixed::Fixed(const int value): _value(value << _fractional_bits)
@@ -28,7 +27,6 @@ Fixed::Fixed(const float value): _value(roundf(value * (1 << _fractional_bits)))
 
 Fixed::~Fixed()
 {
-	// Destructor
 	std::cout << "Destructor called" << std::endl;
 }
 

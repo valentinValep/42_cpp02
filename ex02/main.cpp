@@ -15,12 +15,12 @@ int main( void ) {
 	std::cout << b << std::endl;
 
 	std::cout << Fixed::max( a, b ) << std::endl;
-	std::cout << (a < b) << std::endl;
-	std::cout << (a > b) << std::endl;
+	std::cout << (a < b) << std::endl; // 1
+	std::cout << (a > b) << std::endl; // 2
 
-	Fixed d( 0.0f / 0.0f );
-	Fixed e( 1.0f / 0.0f );
-	Fixed f( -1.0f / 0.0f );
+	Fixed d( 0.0f / 0.0f ); // NaN
+	Fixed e( 1.0f / 0.0f ); // +inf
+	Fixed f( -1.0f / 0.0f ); // -inf
 	std::cout << d << std::endl;
 	std::cout << e << std::endl;
 	std::cout << f << std::endl;
