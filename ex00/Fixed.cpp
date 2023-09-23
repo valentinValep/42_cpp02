@@ -3,14 +3,13 @@
 
 Fixed::Fixed(): _value(0)
 {
-	// Default constructor
 	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src; // Assignment operator
+	*this = src;
 }
 
 Fixed	&Fixed::operator=(const Fixed &src)
@@ -24,7 +23,6 @@ Fixed	&Fixed::operator=(const Fixed &src)
 
 Fixed::~Fixed()
 {
-	// Destructor
 	std::cout << "Destructor called" << std::endl;
 }
 
